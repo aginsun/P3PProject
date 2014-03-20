@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA9D1933-FEE7-4804-A6DA-BAF3A83365E1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>P3P</RootNamespace>
+    <AssemblyName>P3P</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\miniaturen\2013-06-05 19.25.26_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_0047_Rome.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_0075_Rome-Edit.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_0099_Rome-Edit.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_0110_Rome-Edit.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_0112_Rome.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_0125_Rome-Edit.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_0164_Rome-Edit-2.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_0825_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_0834_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_0874_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_0877_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_0896_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_0906_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_0925_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_0945_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_0957_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1012_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1015_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1091_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1104_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1105_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1146_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1152_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1154_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1172_2011_Sziget.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1440_Berlijn.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1442_Berlijn.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1449_Berlijn.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1450_Berlijn.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1451_Berlijn.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1486_Berlijn.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1494_Berlijn.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1495_Berlijn_HDR.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1511_Berlijn.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1521_Berlijn.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1522_Berlijn.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1523_Berlijn.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1528_Berlijn-Edit.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1532_Berlijn.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1533_Berlijn.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1862_New_Orleans.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1882_New_Orleans.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1910_New_Orleans.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1918_New_Orleans.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1925_New_Orleans.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1933_New_Orleans.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_1944_New_Orleans.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_2025_New_Orleans.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_2423_Orchideenhof.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_2434_Orchideenhof.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_2439_Orchideenhof.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_2443_Orchideenhof.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_2447_Orchideenhof.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_2450_Orchideenhof.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_2452_Orchideenhof.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_3037_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_3039_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_3041_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_3044_Berlijn_FOL-Edit.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_3051_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_3052_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\miniaturen\D7K_3053_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF2014_New_Orleans.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF2071_New_Orleans.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF2143_New_Orleans.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF2147_New_Orleans.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF2156_New_Orleans.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF2171_New_Orleans-Edit-2.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF3359_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF3367_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF3403_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF3438_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF3445_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF3477_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4216_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4218_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4220_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4227_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4241_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4245_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4247_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4250_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4253_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4264_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4270_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4284_Tallin 2.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4284_Tallin.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4293_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4296_Tallinn 2.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4296_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4305_Tallinn 2.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4305_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4316_Tallinn 2.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4316_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4328_Tallinn 2.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4328_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4329_Tallinn 2.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4329_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4337_Tallinn 2.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4337_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4339_Tallinn 2.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4339_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4341_Tallinn 2.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4341_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4345_Tallinn 2.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4345_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4347_Tallinn 2.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4347_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4377_Tallinn 2.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4377_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4391_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4394_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4399_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4408_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4415_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4448_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4460_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4465_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4497_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4506_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4515_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4520_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4521_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4523_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4527_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4545_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4547_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\DSCF4562_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\P1000580_Maria_Mena_Paradiso-Edit.jpg" />
+    <Content Include="App_Data\miniaturen\P1000591_Maria_Mena_Paradiso-Edit.jpg" />
+    <Content Include="App_Data\miniaturen\P1000592_Maria_Mena_Paradiso-Edit.jpg" />
+    <Content Include="App_Data\miniaturen\P1000595_Maria_Mena_Paradiso-Edit.jpg" />
+    <Content Include="App_Data\miniaturen\P1000596_Maria_Mena_Paradiso-Edit.jpg" />
+    <Content Include="App_Data\miniaturen\P1000600_Maria_Mena_Paradiso.jpg" />
+    <Content Include="App_Data\miniaturen\P1000602_Maria_Mena_Paradiso-Edit.jpg" />
+    <Content Include="App_Data\miniaturen\P1000955_Pinkpop.jpg" />
+    <Content Include="App_Data\miniaturen\P1000957_Pinkpop.jpg" />
+    <Content Include="App_Data\miniaturen\P1000958_Pinkpop.jpg" />
+    <Content Include="App_Data\miniaturen\P1000959_Pinkpop.jpg" />
+    <Content Include="App_Data\miniaturen\P1000969_Pinkpop.jpg" />
+    <Content Include="App_Data\miniaturen\P1000974_Pinkpop.jpg" />
+    <Content Include="App_Data\miniaturen\P1000990_Pinkpop.jpg" />
+    <Content Include="App_Data\miniaturen\P1010367_2011_Zomervakantie_HDR.jpg" />
+    <Content Include="App_Data\miniaturen\P1010664_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\P1010673_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\P1010677_Tallinn.jpg" />
+    <Content Include="App_Data\miniaturen\P1010685_Tallinn.jpg" />
+    <Content Include="App_Data\P3P.mdf" />
+    <Content Include="App_Data\P3P_log.ldf">
+      <DependentUpon>P3P.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\resizes\2013-06-05 19.25.26_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\D7K_0047_Rome.jpg" />
+    <Content Include="App_Data\resizes\D7K_0075_Rome-Edit.jpg" />
+    <Content Include="App_Data\resizes\D7K_0099_Rome-Edit.jpg" />
+    <Content Include="App_Data\resizes\D7K_0110_Rome-Edit.jpg" />
+    <Content Include="App_Data\resizes\D7K_0112_Rome.jpg" />
+    <Content Include="App_Data\resizes\D7K_0125_Rome-Edit.jpg" />
+    <Content Include="App_Data\resizes\D7K_0164_Rome-Edit-2.jpg" />
+    <Content Include="App_Data\resizes\D7K_0825_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_0834_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_0874_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_0877_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_0896_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_0906_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_0925_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_0945_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_0957_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_1012_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_1015_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_1091_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_1104_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_1105_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_1146_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_1152_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_1154_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_1172_2011_Sziget.jpg" />
+    <Content Include="App_Data\resizes\D7K_1440_Berlijn.jpg" />
+    <Content Include="App_Data\resizes\D7K_1442_Berlijn.jpg" />
+    <Content Include="App_Data\resizes\D7K_1449_Berlijn.jpg" />
+    <Content Include="App_Data\resizes\D7K_1450_Berlijn.jpg" />
+    <Content Include="App_Data\resizes\D7K_1451_Berlijn.jpg" />
+    <Content Include="App_Data\resizes\D7K_1486_Berlijn.jpg" />
+    <Content Include="App_Data\resizes\D7K_1494_Berlijn.jpg" />
+    <Content Include="App_Data\resizes\D7K_1495_Berlijn_HDR.jpg" />
+    <Content Include="App_Data\resizes\D7K_1511_Berlijn.jpg" />
+    <Content Include="App_Data\resizes\D7K_1521_Berlijn.jpg" />
+    <Content Include="App_Data\resizes\D7K_1522_Berlijn.jpg" />
+    <Content Include="App_Data\resizes\D7K_1523_Berlijn.jpg" />
+    <Content Include="App_Data\resizes\D7K_1528_Berlijn-Edit.jpg" />
+    <Content Include="App_Data\resizes\D7K_1532_Berlijn.jpg" />
+    <Content Include="App_Data\resizes\D7K_1533_Berlijn.jpg" />
+    <Content Include="App_Data\resizes\D7K_1862_New_Orleans.jpg" />
+    <Content Include="App_Data\resizes\D7K_1882_New_Orleans.jpg" />
+    <Content Include="App_Data\resizes\D7K_1910_New_Orleans.jpg" />
+    <Content Include="App_Data\resizes\D7K_1918_New_Orleans.jpg" />
+    <Content Include="App_Data\resizes\D7K_1925_New_Orleans.jpg" />
+    <Content Include="App_Data\resizes\D7K_1933_New_Orleans.jpg" />
+    <Content Include="App_Data\resizes\D7K_1944_New_Orleans.jpg" />
+    <Content Include="App_Data\resizes\D7K_2025_New_Orleans.jpg" />
+    <Content Include="App_Data\resizes\D7K_2423_Orchideenhof.jpg" />
+    <Content Include="App_Data\resizes\D7K_2434_Orchideenhof.jpg" />
+    <Content Include="App_Data\resizes\D7K_2439_Orchideenhof.jpg" />
+    <Content Include="App_Data\resizes\D7K_2443_Orchideenhof.jpg" />
+    <Content Include="App_Data\resizes\D7K_2447_Orchideenhof.jpg" />
+    <Content Include="App_Data\resizes\D7K_2450_Orchideenhof.jpg" />
+    <Content Include="App_Data\resizes\D7K_2452_Orchideenhof.jpg" />
+    <Content Include="App_Data\resizes\D7K_3037_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\resizes\D7K_3039_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\resizes\D7K_3041_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\resizes\D7K_3044_Berlijn_FOL-Edit.jpg" />
+    <Content Include="App_Data\resizes\D7K_3051_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\resizes\D7K_3052_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\resizes\D7K_3053_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\resizes\DSCF2014_New_Orleans.jpg" />
+    <Content Include="App_Data\resizes\DSCF2071_New_Orleans.jpg" />
+    <Content Include="App_Data\resizes\DSCF2143_New_Orleans.jpg" />
+    <Content Include="App_Data\resizes\DSCF2147_New_Orleans.jpg" />
+    <Content Include="App_Data\resizes\DSCF2156_New_Orleans.jpg" />
+    <Content Include="App_Data\resizes\DSCF2171_New_Orleans-Edit-2.jpg" />
+    <Content Include="App_Data\resizes\DSCF3359_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\resizes\DSCF3367_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\resizes\DSCF3403_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\resizes\DSCF3438_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\resizes\DSCF3445_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\resizes\DSCF3477_Berlijn_FOL.jpg" />
+    <Content Include="App_Data\resizes\DSCF4216_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4218_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4220_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4227_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4241_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4245_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4247_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4250_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4253_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4264_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4270_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4284_Tallin 2.jpg" />
+    <Content Include="App_Data\resizes\DSCF4284_Tallin.jpg" />
+    <Content Include="App_Data\resizes\DSCF4293_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4296_Tallinn 2.jpg" />
+    <Content Include="App_Data\resizes\DSCF4296_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4305_Tallinn 2.jpg" />
+    <Content Include="App_Data\resizes\DSCF4305_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4316_Tallinn 2.jpg" />
+    <Content Include="App_Data\resizes\DSCF4316_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4328_Tallinn 2.jpg" />
+    <Content Include="App_Data\resizes\DSCF4328_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4329_Tallinn 2.jpg" />
+    <Content Include="App_Data\resizes\DSCF4329_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4337_Tallinn 2.jpg" />
+    <Content Include="App_Data\resizes\DSCF4337_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4339_Tallinn 2.jpg" />
+    <Content Include="App_Data\resizes\DSCF4339_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4341_Tallinn 2.jpg" />
+    <Content Include="App_Data\resizes\DSCF4341_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4345_Tallinn 2.jpg" />
+    <Content Include="App_Data\resizes\DSCF4345_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4347_Tallinn 2.jpg" />
+    <Content Include="App_Data\resizes\DSCF4347_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4377_Tallinn 2.jpg" />
+    <Content Include="App_Data\resizes\DSCF4377_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4391_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4394_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4399_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4408_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4415_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4448_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4460_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4465_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4497_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4506_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4515_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4520_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4521_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4523_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4527_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4545_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4547_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\DSCF4562_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\P1000580_Maria_Mena_Paradiso-Edit.jpg" />
+    <Content Include="App_Data\resizes\P1000591_Maria_Mena_Paradiso-Edit.jpg" />
+    <Content Include="App_Data\resizes\P1000592_Maria_Mena_Paradiso-Edit.jpg" />
+    <Content Include="App_Data\resizes\P1000595_Maria_Mena_Paradiso-Edit.jpg" />
+    <Content Include="App_Data\resizes\P1000596_Maria_Mena_Paradiso-Edit.jpg" />
+    <Content Include="App_Data\resizes\P1000600_Maria_Mena_Paradiso.jpg" />
+    <Content Include="App_Data\resizes\P1000602_Maria_Mena_Paradiso-Edit.jpg" />
+    <Content Include="App_Data\resizes\P1000955_Pinkpop.jpg" />
+    <Content Include="App_Data\resizes\P1000957_Pinkpop.jpg" />
+    <Content Include="App_Data\resizes\P1000958_Pinkpop.jpg" />
+    <Content Include="App_Data\resizes\P1000959_Pinkpop.jpg" />
+    <Content Include="App_Data\resizes\P1000969_Pinkpop.jpg" />
+    <Content Include="App_Data\resizes\P1000974_Pinkpop.jpg" />
+    <Content Include="App_Data\resizes\P1000990_Pinkpop.jpg" />
+    <Content Include="App_Data\resizes\P1010367_2011_Zomervakantie_HDR.jpg" />
+    <Content Include="App_Data\resizes\P1010664_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\P1010673_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\P1010677_Tallinn.jpg" />
+    <Content Include="App_Data\resizes\P1010685_Tallinn.jpg" />
+    <Content Include="App_Data\siteimages\wild_flowers.png" />
+    <Content Include="FileUpload.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Index.aspx" />
+    <Content Include="SoloFoto.aspx" />
+    <Content Include="StyleSheet1.css" />
+    <Content Include="Web.config" />
+    <Content Include="Registratie.aspx" />
+    <Content Include="Album1.aspx" />
+    <Content Include="Winkelwagen.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FileUpload.aspx.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileUpload.aspx.designer.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs" />
+    <Compile Include="SoloFoto.aspx.cs">
+      <DependentUpon>SoloFoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SoloFoto.aspx.designer.cs">
+      <DependentUpon>SoloFoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="DatabaseConnector.cs" />
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registratie.aspx.cs">
+      <DependentUpon>Registratie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registratie.aspx.designer.cs">
+      <DependentUpon>Registratie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Album1.aspx.cs">
+      <DependentUpon>Album1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Album1.aspx.designer.cs">
+      <DependentUpon>Album1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Winkelwagen.aspx.cs">
+      <DependentUpon>Winkelwagen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Winkelwagen.aspx.designer.cs">
+      <DependentUpon>Winkelwagen.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fotos\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62495</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62495/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

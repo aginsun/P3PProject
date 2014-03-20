@@ -1,0 +1,2 @@
+﻿SET IDENTITY_INSERT [dbo].[Albums] ON
+SET IDENTITY_INSERT [dbo].[Albums] OFF
