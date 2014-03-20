@@ -14,7 +14,23 @@
         <asp:Button runat="server" ID="UploadButton" Text="Upload" OnClick="Uploadbutton_Click" />
         
         <br /> <br />
+        <asp:Label ID="Label1" runat="server" Text="Select album for photo"></asp:Label>
+        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SQLDatasource1" SelectCommand="SELECT Name, Id FROM Albums" DataTextField='Name'></asp:DropDownList>     
+        <br />
+        <asp:Label ID="Label2" runat="server" Text="Or create a new album first"></asp:Label>
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:Button ID="Button2" runat="server" Text="Create new album" />
+        <br /> <br />
         <asp:Label runat="server" id="StatusLabel" Text="Upload status: " />
+
+              <asp:SqlDataSource
+          id="SqlDataSource1"
+          runat="server"
+          DataSourceMode="DataReader"
+          ConnectionString="<%$ ConnectionStrings:P3P%>"
+          SelectCommand="SELECT Name, Id FROM Albums">
+      </asp:SqlDataSource>
+
     </div>
     </form>
 </body>
