@@ -14,7 +14,7 @@
         <asp:Button ID="onthoud" runat="server" Text="Voeg toe aan Winkelwagen" OnClick="onthoud_Click" />
         <asp:Label ID="label1" runat="server" Text="Log in om afbeeldingen toe te voegen aan het winkelwagentje" Visible="false"></asp:Label>
         <br />
-        <asp:Label ID="Placeholder" runat="server" Text="Placeholder" ></asp:Label>
+        <asp:Image runat="server" ID="image" ImageUrl="/miniaturen/D7K_0047_Rome.jpg" />
         <br />
         <asp:Button ID="Vorige" runat="server" Text="Vorige" OnClick="Vorige_Click" />
         <asp:Button ID="Next" runat="server" Text="Volgende" OnClick="Next_Click" />

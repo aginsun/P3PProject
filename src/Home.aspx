@@ -13,7 +13,7 @@
         <li><a href="#">About</a></li>
         <li><a href="/Winkelwagen.aspx">Winkelwagentje</a></li>
         <li><a href="/SoloFoto.aspx">Foto's Kopen</a></li>
-        <li><a href="/index.aspx">Log in</a></li>
+        <li runat="server" id="loginbutton"><a runat="server" id="login" href="/index.aspx">Log in</a></li>
     </ul>
 
     <h1>Welkom op de Foto Website</h1>

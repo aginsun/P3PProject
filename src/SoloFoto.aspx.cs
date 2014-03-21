@@ -9,7 +9,7 @@ namespace P3P
 {
     public partial class SoloFoto : System.Web.UI.Page
     {
-        
+        public static int fotoID = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,7 +25,7 @@ namespace P3P
                 if ((string)Session["Button"] == "True")
                 {
                     string name = (string)Session["Username"];
-                    //DatabaseConnector.getInstance().SendShopping(3, "Hier moet de link van foto", name);
+                    //DatabaseConnector.getInstance().SendShopping(fotoID, "Hier moet de link van foto", name);
                     Session["Button"] = "False";
                 }
             }
@@ -37,14 +37,15 @@ namespace P3P
         }
         protected void Next_Click(object sender, EventArgs e)
         {
+            fotoID++;
+            //DatabaseConnector.getInstance().getFoto(fotoID);
             Server.Transfer("SoloFoto.aspx");
-            //hier moet code voor volgende de foto
         }
 
         protected void Vorige_Click(object sender, EventArgs e)
         {
+
             Server.Transfer("SoloFoto.aspx");
-            // hier moet code voor vorige foto uit album
         }
 
         protected void Terug_Click(object sender, EventArgs e)
