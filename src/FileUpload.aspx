@@ -12,16 +12,21 @@
         <asp:FileUpload ID="FileUploadControl" runat="server" />
         <asp:TextBox ID="Text1" runat="server"></asp:TextBox>
         <asp:Button runat="server" ID="UploadButton" Text="Upload" OnClick="Uploadbutton_Click" />
-        
         <br /> <br />
         <asp:Label ID="Label1" runat="server" Text="Select album for photo"></asp:Label>
-        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SQLDatasource1" SelectCommand="SELECT Name, Id FROM Albums" DataTextField='Name'></asp:DropDownList>     
-        <br />
+ <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SQLDatasource1"  
+     DataTextField='Name' AppendDataBoundItems="True" AutoPostBack="True" DataValueField="Id">
+             <asp:ListItem>-- pick one --</asp:ListItem>
+ </asp:DropDownList> 
+ 
+        <br /><br />
+        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+
+        <asp:Label runat="server" id="StatusLabel" Text="Upload status: " />
+        <br /><br />
         <asp:Label ID="Label2" runat="server" Text="Or create a new album first"></asp:Label>
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         <asp:Button ID="Button2" runat="server" Text="Create new album" />
-        <br /> <br />
-        <asp:Label runat="server" id="StatusLabel" Text="Upload status: " />
 
               <asp:SqlDataSource
           id="SqlDataSource1"

@@ -9,33 +9,29 @@ namespace P3P
 {
     public partial class FileUpload : System.Web.UI.Page
     {
+        int albumid = 0;
+
         protected void Uploadbutton_Click(object sender, EventArgs e)
         {
-            if(FileUploadControl.HasFile)
+            if (DropDownList1.SelectedValue != "-- pick one --")
             {
-                try{
-                    string filename = FileUploadControl.FileName;
-                    FileUploadControl.SaveAs(Server.MapPath("~/Fotos/") + filename);
-                    StatusLabel.Text = "Upload status: File uploaded!";
-                    DatabaseConnector.getInstance().SetFile(Text1.Text, filename);
-                }
-                catch(Exception ex)
+                if (FileUploadControl.HasFile)
                 {
-                    StatusLabel.Text ="Error";
+                    try
+                    {
+                        string filename = FileUploadControl.FileName;
+                        FileUploadControl.SaveAs(Server.MapPath("~/Fotos/") + filename);
+                        StatusLabel.Text = "Upload status: File uploaded!";
+                        DatabaseConnector.getInstance().SetFile(Text1.Text, filename, Convert.ToInt32(DropDownList1.SelectedValue));
+                    }
+                    catch (Exception ex)
+                    {
+                        StatusLabel.Text = "Error";
+                    }
                 }
             }
         }
-        
-        protected void Button1_Click (object sender, System.EventArgs e)
-        {
-            // Is anything selected? The index is -1 if nothing is selected.
-                if (DropDownList1.SelectedIndex > -1)
-                {
-                    string gekozenalbum = DropDownList1.SelectedItem.Text;
-
-                } // deze werkt niet, dit is de code die een nieuw album moet maken, zoals ik nu zal laten zien en dan moet nog het Id nummer van het gekozen album meegegeven worden aan de geuploade pic dat vindik tricky zaken
-        }
-
+       
         protected void Button2_Click (object sender, System.EventArgs e)
         {
             string s = TextBox1.Text;
@@ -45,18 +41,31 @@ namespace P3P
             {
                 if (!textboxinput.ToCharArray().Contains(cst[i]))
                 {
-                break;
+                    TextBox1.Text = "Please use only numbers and letters";
                 }
-                else
+            }
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (textboxinput.ToCharArray().Contains(cst[i]))
                 {
                     DatabaseConnector.getInstance().setalbum(TextBox1.Text);
                 }
             }
         }
 
+    
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            string albumname = DropDownList1.SelectedValue;
+            if (albumname != "-- pick one --")
+            Label3.Text = albumname;
+        }
+
+        protected void DropDownList1_TextChanged(object sender, EventArgs e)
+        {
+           // string albumname = DropDownList1.SelectedValue;
+            //Label3.Text = albumname;
         }
     }
 }

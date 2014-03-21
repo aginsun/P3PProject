@@ -204,7 +204,7 @@ namespace P3P
             }
         }
 
-        public void SetFile(string titel, string link)
+        public void SetFile(string titel, string link, int id)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["P3P"].ConnectionString;
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -213,9 +213,10 @@ namespace P3P
                 {
                     selectCmd.CommandType = CommandType.Text;
                     connection.Open();
-                    selectCmd.CommandText = @" INSERT INTO Pictures (titel, link) VALUES (@titel, @link)";
+                    selectCmd.CommandText = @" INSERT INTO Pictures (titel, link, AlbumId) VALUES (@titel, @link, @AlbumId)";
                     selectCmd.Parameters.AddWithValue("@titel", titel);
                     selectCmd.Parameters.AddWithValue("@link", link);
+                    selectCmd.Parameters.AddWithValue("@AlbumId", id);
                     selectCmd.ExecuteNonQuery();
                     connection.Close();
                 }
