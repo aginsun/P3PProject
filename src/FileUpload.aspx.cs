@@ -42,15 +42,15 @@ namespace P3P
                 if (!textboxinput.ToCharArray().Contains(cst[i]))
                 {
                     TextBox1.Text = "Please use only numbers and letters";
+                    return;
                 }
             }
-            for (int i = 0; i < s.Length; i++)
-            {
-                if (textboxinput.ToCharArray().Contains(cst[i]))
-                {
+            
+            
+          
+                
                     DatabaseConnector.getInstance().setalbum(TextBox1.Text);
-                }
-            }
+            
         }
 
     
