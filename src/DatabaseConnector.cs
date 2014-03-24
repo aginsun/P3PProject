@@ -179,9 +179,9 @@ namespace P3P
                         {
                             string Name = Convert.ToString(reader["name"]);
                             naam.Add(Name);
-                            
+
                         }
-                        
+
                         return naam;
                     }
                 }
@@ -222,6 +222,81 @@ namespace P3P
                 }
             }
         }
+        public void SetOrder(string link, string username)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["P3P"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand selectCmd = connection.CreateCommand())
+                {
+                    selectCmd.CommandType = CommandType.Text;
+                    connection.Open();
+                    selectCmd.CommandText = @" INSERT INTO Bestelling (Bestelling,Username) VALUES (@Bestelling,@Username)";
+                    selectCmd.Parameters.AddWithValue("@Bestelling", link);
+                    selectCmd.Parameters.AddWithValue("@Username", username);
+                    selectCmd.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+        }
+        public List<string> getOrders(string name)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["P3P"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand selectCmd = connection.CreateCommand())
+                {
+                    selectCmd.CommandType = CommandType.Text;
+                    selectCmd.CommandText = @" SELECT Bestelling FROM Bestelling WHERE Username= @user";
+                    selectCmd.Parameters.AddWithValue("@user", name);
+                    connection.Open();
 
+                    using (SqlDataReader reader = selectCmd.ExecuteReader())
+                    {
+                        List<string> Orders = new List<string>();
+                        while (reader.Read())
+                        {
+                            string Order = Convert.ToString(reader["Bestelling"]);
+                            Orders.Add(Order);
+
+                        }
+
+                        return Orders;
+                    }
+                }
+            }
+        }
+        public void DellALL(string naam)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["P3P"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand selectCmd = connection.CreateCommand())
+                {
+                    selectCmd.CommandType = CommandType.Text;
+                    connection.Open();
+                    selectCmd.CommandText = @" DELETE FROM Bestelling WHERE Username=@name";
+                    selectCmd.Parameters.AddWithValue("@name", naam);
+                    selectCmd.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+        }
+        public void DellSome(string bestelling)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["P3P"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand selectCmd = connection.CreateCommand())
+                {
+                    selectCmd.CommandType = CommandType.Text;
+                    connection.Open();
+                    selectCmd.CommandText = @" DELETE FROM Bestelling WHERE Bestelling=@Best";
+                    selectCmd.Parameters.AddWithValue("@Best", bestelling);
+                    selectCmd.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+        }
     }
 }

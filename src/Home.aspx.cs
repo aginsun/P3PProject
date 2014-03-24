@@ -13,11 +13,13 @@ namespace P3P
         {
             if ((string)Session["logged"] == "No")
             {
-
                 Server.Transfer("Index.aspx");
             }
+            else if((string)Session["logged"] == "Yes")
+            {
+                login.InnerText = "Logout";
+            }
             string naam = (string)Session["Username"];
-
         }
     }
 }

@@ -9,12 +9,12 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:FileUpload ID="FileUploadControl" runat="server" />
+        <asp:FileUpload ID="FileUploadControl" runat="server" AllowMultiple="True" />
         <asp:TextBox ID="Text1" runat="server"></asp:TextBox>
         <asp:Button runat="server" ID="UploadButton" Text="Upload" OnClick="Uploadbutton_Click" />
         <br /> <br />
         <asp:Label ID="Label1" runat="server" Text="Select album for photo"></asp:Label>
- <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SQLDatasource1"  
+        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SQLDatasource1"  
      DataTextField='Name' AppendDataBoundItems="True" AutoPostBack="True" DataValueField="Id">
              <asp:ListItem>-- pick one --</asp:ListItem>
  </asp:DropDownList> 

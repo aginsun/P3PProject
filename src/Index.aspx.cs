@@ -19,12 +19,14 @@ namespace P3P
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            login.Click += new EventHandler(login_Click);
-            creeër.Click += new EventHandler(creeër_Click);
-            if((string)Session["Logged"]=="Yes")
+            if ((string)Session["Logged"] == "Yes")
             {
+                Session["Username"] = "";
+                Session["Logged"] = "No";
                 Server.Transfer("Home.aspx");
             }
+            login.Click += new EventHandler(login_Click);
+            creeër.Click += new EventHandler(creeër_Click);
         }
     
         protected void login_Click(object sender, EventArgs e)

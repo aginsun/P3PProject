@@ -22,31 +22,46 @@ namespace P3P
 
                 List<string> order = new List<string>();
                 string name = (string)Session["Username"];
-                //List<Order> list = DatabaseConnector.getInstance().getOrder(name);
-                //foreach (Order Username in list)
-                //{
-                //    if (Username.getUsername() == name)
-                //    {
-                //        order.Add(Username.getBestellingen());
-                //     }
-                // }
-
-                for (int i = 0; i < order.Count; i++)
+                order = DatabaseConnector.getInstance().getOrders(name);
+                if (!IsPostBack)
                 {
-                    Tbox.Text += order[i];
+                    ding1.DataSource = order;
+                    ding1.DataBind();
+
                 }
+
+
+
+                foreach (RepeaterItem ritem in ding1.Items)
+                {
+                    Button btn = ritem.FindControl("button1") as Button;
+                    btn.Click += new EventHandler(Unnamed_Click);
+                }
+                
             }
         }
 
         protected void terug_Click(object sender, EventArgs e)
         {
-            Server.Transfer("Home.aspx");
+            Response.Redirect("Home.aspx");
         }
 
         protected void Afrekenen_Click(object sender, EventArgs e)
         {
             string name = (string)Session["Username"];
-            //DatabaseConnector.getInstance().DelALLShopping(name);
+            
+            DatabaseConnector.getInstance().DellALL(name);
+        }
+
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+
+            Button btn = (Button)sender;
+            RepeaterItem ritem = (RepeaterItem)btn.NamingContainer;
+            Label label1 = (Label)ritem.FindControl("label1");
+            DatabaseConnector.getInstance().DellSome(label1.Text);
+            Response.Redirect("Winkelwagen.aspx");
+            
         }
     }
 }

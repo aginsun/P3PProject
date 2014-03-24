@@ -4,8 +4,22 @@
 <html>
 <head>
     <link href="stylesheet1.css" rel="stylesheet" type="text/css" />
-    <title>Foto Website</title>
+    <title>Gerlof Hoekstra Foto's</title>
 </head>
+<body>
+    
+    <ul>
+        <li><a href="#">Albums</a></li>
+        <li><a href="/Winkelwagen.aspx">Winkelwagentje</a></li>
+        <li><a href="/SoloFoto.aspx">Foto's Kopen</a></li>
+        <li runat="server" id="loginbutton"><a runat="server" id="A1" href="/index.aspx">Log in</a></li>
+    </ul>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
 <body ALIGN="CENTER">
     <form id="form1" runat="server">
     <div>

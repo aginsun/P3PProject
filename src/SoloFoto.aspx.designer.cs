@@ -49,13 +49,13 @@ namespace P3P {
         protected global::System.Web.UI.WebControls.Label label1;
         
         /// <summary>
-        /// Placeholder control.
+        /// image control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Placeholder;
+        protected global::System.Web.UI.WebControls.Image image;
         
         /// <summary>
         /// Vorige control.

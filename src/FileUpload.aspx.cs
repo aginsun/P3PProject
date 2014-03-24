@@ -9,8 +9,6 @@ namespace P3P
 {
     public partial class FileUpload : System.Web.UI.Page
     {
-        int albumid = 0;
-
         protected void Uploadbutton_Click(object sender, EventArgs e)
         {
             if (DropDownList1.SelectedValue != "-- pick one --")
@@ -32,31 +30,21 @@ namespace P3P
             }
         }
        
-        protected void Button2_Click (object sender, System.EventArgs e)
+        protected void Button2_Click (object sender, EventArgs e)
         {
-            string s = TextBox1.Text;
-            string textboxinput = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
-            char[] cst = s.ToCharArray();
-            for (int i = 0; i < s.Length; i++)
-            {
-                if (!textboxinput.ToCharArray().Contains(cst[i]))
+            if (TextBox1!=null)
                 {
-                    TextBox1.Text = "Please use only numbers and letters";
-                    return;
+                    DatabaseConnector.getInstance().setalbum(TextBox1.Text);
+                return;
                 }
             }
-            
-            
-          
-                
-                    DatabaseConnector.getInstance().setalbum(TextBox1.Text);
-            
-        }
+
 
     
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Button2.Click += new EventHandler(Button2_Click);
             string albumname = DropDownList1.SelectedValue;
             if (albumname != "-- pick one --")
             Label3.Text = albumname;
